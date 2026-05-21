@@ -92,6 +92,14 @@ const testimonios = [
     <p>Sin Excel. Sin errores. Sin observaciones.</p>
   </div>
 
+  <!-- Métricas -->
+  <div class="metrics-section">
+    <div><div class="metric-number">50+</div><div class="metric-label">Clientes</div></div>
+    <div><div class="metric-number">98%</div><div class="metric-label">Satisfacción</div></div>
+    <div><div class="metric-number">16+</div><div class="metric-label">Años</div></div>
+    <div><div class="metric-number">24/7</div><div class="metric-label">Soporte</div></div>
+  </div>
+
 </section>
 
 <style>
@@ -203,8 +211,18 @@ const testimonios = [
   color: #FF6B35; text-transform: uppercase; letter-spacing: 2px;
 }
 
+.metrics-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem; margin-top: 4rem; text-align: center;
+  max-width: 1400px; margin-left: auto; margin-right: auto;
+}
+.metric-number { font-size: 2.5rem; font-weight: 900; color: #FF6B35; }
+.metric-label  { color: #5f6f75; font-size: .95rem; margin-top: 4px; }
+
 @media (max-width: 768px) {
   .casos-exito { padding: 60px 1.5rem; }
   .testimonios-grid { grid-template-columns: 1fr; }
+  .metrics-section { grid-template-columns: repeat(2, 1fr); margin-top: 2.5rem; }
 }
 </style>
