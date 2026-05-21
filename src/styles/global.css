@@ -21,7 +21,7 @@ header, nav, main, footer, section, article, aside { display: block; border: non
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;

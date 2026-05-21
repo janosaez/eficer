@@ -137,7 +137,24 @@
   </div>
 </section>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script is:inline>
+(function(){
+  var loaded = false;
+  function loadRecaptcha(){
+    if(loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://www.google.com/recaptcha/api.js';
+    s.async = true;
+    document.head.appendChild(s);
+  }
+  var form = document.querySelector('.eficer-contact-form');
+  if(form){
+    form.addEventListener('focusin', loadRecaptcha, {once: true});
+    form.addEventListener('touchstart', loadRecaptcha, {once: true, passive: true});
+  }
+})();
+</script>
 
 <style>
 /* ── WRAPPER ── */
