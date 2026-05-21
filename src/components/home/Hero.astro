@@ -62,29 +62,29 @@ const waLink = "https://wa.me/51999252787?text=Hola,%20quiero%20saber%20c%C3%B3m
 
         <div class="form-row">
           <div class="form-group">
-            <label>Nombre *</label>
-            <input type="text" name="nombre_eficer" required minlength="3" />
+            <label for="h-nombre">Nombre *</label>
+            <input id="h-nombre" type="text" name="nombre_eficer" required minlength="3" autocomplete="name" />
           </div>
           <div class="form-group">
-            <label>Institución / Empresa *</label>
-            <input type="text" name="empresa_eficer" required minlength="3" />
+            <label for="h-empresa">Institución / Empresa *</label>
+            <input id="h-empresa" type="text" name="empresa_eficer" required minlength="3" autocomplete="organization" />
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label>Teléfono *</label>
-            <input type="tel" name="tel_eficer" required minlength="7" />
+            <label for="h-tel">Teléfono *</label>
+            <input id="h-tel" type="tel" name="tel_eficer" required minlength="7" autocomplete="tel" />
           </div>
           <div class="form-group">
-            <label>Correo electrónico</label>
-            <input type="email" name="email_eficer" required />
+            <label for="h-email">Correo electrónico</label>
+            <input id="h-email" type="email" name="email_eficer" required autocomplete="email" />
           </div>
         </div>
 
         <div class="form-group">
-          <label>Mensaje opcional</label>
-          <textarea name="mensaje_eficer" placeholder="Cuéntanos brevemente sobre tu institución y tus necesidades"></textarea>
+          <label for="h-mensaje">Mensaje opcional</label>
+          <textarea id="h-mensaje" name="mensaje_eficer" placeholder="Cuéntanos brevemente sobre tu institución y tus necesidades"></textarea>
         </div>
 
         <div class="captcha-container">
@@ -166,8 +166,8 @@ const waLink = "https://wa.me/51999252787?text=Hola,%20quiero%20saber%20c%C3%B3m
   display: inline-block;
   padding: 10px 22px;
   border: 1px solid rgba(255,106,61,.55);
-  background: rgba(255,106,61,.08);
-  color: #FF6A3D;
+  background: transparent;
+  color: #FF8C65;
   border-radius: 50px;
   font-size: 13px;
   font-weight: 800;

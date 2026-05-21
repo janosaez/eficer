@@ -86,29 +86,29 @@
 
         <div class="form-row">
           <div class="form-group">
-            <label>Nombre *</label>
-            <input type="text" name="nombre_eficer" required minlength="3" placeholder="Tu nombre completo" />
+            <label for="c-nombre">Nombre *</label>
+            <input id="c-nombre" type="text" name="nombre_eficer" required minlength="3" placeholder="Tu nombre completo" autocomplete="name" />
           </div>
           <div class="form-group">
-            <label>Institución / Empresa *</label>
-            <input type="text" name="empresa_eficer" required minlength="3" placeholder="Nombre de tu institución" />
+            <label for="c-empresa">Institución / Empresa *</label>
+            <input id="c-empresa" type="text" name="empresa_eficer" required minlength="3" placeholder="Nombre de tu institución" autocomplete="organization" />
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label>Teléfono *</label>
-            <input type="tel" name="tel_eficer" required minlength="7" placeholder="+51 999 999 999" />
+            <label for="c-tel">Teléfono *</label>
+            <input id="c-tel" type="tel" name="tel_eficer" required minlength="7" placeholder="+51 999 999 999" autocomplete="tel" />
           </div>
           <div class="form-group">
-            <label>Correo electrónico</label>
-            <input type="email" name="email_eficer" placeholder="correo@institucion.gob.pe" />
+            <label for="c-email">Correo electrónico</label>
+            <input id="c-email" type="email" name="email_eficer" placeholder="correo@institucion.gob.pe" autocomplete="email" />
           </div>
         </div>
 
         <div class="form-group form-full">
-          <label>Mensaje opcional</label>
-          <textarea name="mensaje_eficer" placeholder="Cuéntanos brevemente sobre tu institución y tus necesidades"></textarea>
+          <label for="c-mensaje">Mensaje opcional</label>
+          <textarea id="c-mensaje" name="mensaje_eficer" placeholder="Cuéntanos brevemente sobre tu institución y tus necesidades"></textarea>
         </div>
 
         <div class="captcha-container">
