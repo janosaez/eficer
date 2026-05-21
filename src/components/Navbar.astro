@@ -21,6 +21,7 @@ const currentPath = Astro.url.pathname;
         width="160"
         height="44"
         loading="eager"
+        fetchpriority="high"
       />
     </a>
 
@@ -205,14 +206,6 @@ const currentPath = Astro.url.pathname;
 
 <script is:inline>
 (function () {
-  var nav = document.querySelector('.nav-wrap');
-  function onScroll() {
-    if (window.scrollY > 40) nav.classList.add('scrolled');
-    else nav.classList.remove('scrolled');
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
   var hamburger = document.getElementById('nav-hamburger');
   var overlay   = document.getElementById('nav-drawer-overlay');
   var closeBtn  = document.getElementById('nav-drawer-close');
