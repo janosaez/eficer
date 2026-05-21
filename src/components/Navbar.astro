@@ -1,0 +1,228 @@
+---
+const links = [
+  { label: 'Inicio',           href: '/' },
+  { label: 'Cómo funciona',    href: '/como-funciona' },
+  { label: 'Casos de éxito',   href: '/casos-de-exito' },
+  { label: 'Antes de decidir', href: '/antes-de-decidir' },
+  { label: 'Contacto',         href: '/contacto' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="nav-wrap">
+  <div class="container nav-inner">
+
+    <a href="/" class="nav-logo" aria-label="Éficer">
+      <img
+        src="https://eficer.com/wp-content/uploads/2026/05/cropped-logo-eficer-software-de-gestion-patrimonial.png"
+        alt="Éficer — Software de Gestión Patrimonial"
+        class="nav-logo-img"
+        width="160"
+        height="44"
+        loading="eager"
+      />
+    </a>
+
+    <nav class="nav-links" id="nav-links" role="navigation" aria-label="Menú principal">
+      {links.map(l => (
+        <a
+          href={l.href}
+          class:list={['nav-link', { active: currentPath === l.href || (l.href !== '/' && currentPath.startsWith(l.href)) }]}
+        >
+          {l.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="nav-actions">
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<div class="nav-drawer-overlay" id="nav-drawer-overlay">
+  <nav class="nav-drawer" role="dialog" aria-modal="true" aria-label="Menú móvil">
+    <button class="nav-drawer-close" id="nav-drawer-close" aria-label="Cerrar">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <a href="/" class="nav-drawer-logo" aria-label="Éficer">
+      <img
+        src="https://eficer.com/wp-content/uploads/2026/05/cropped-logo-eficer-software-de-gestion-patrimonial.png"
+        alt="Éficer"
+        class="nav-logo-img"
+        width="140"
+        height="38"
+        loading="eager"
+      />
+    </a>
+    {links.map(l => (
+      <a href={l.href} class="nav-drawer-link">{l.label}</a>
+    ))}
+  </nav>
+</div>
+
+<style>
+.nav-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #0A4A5B;
+  box-shadow: 0 5px 20px rgba(0,0,0,.2);
+  border: none;
+  outline: none;
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+.nav-logo { flex-shrink: 0; }
+.nav-logo-img {
+  display: block;
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  transition: transform .35s ease, opacity .25s ease;
+}
+.nav-logo:hover .nav-logo-img { transform: scale(1.08); opacity: .9; }
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-link {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 6px 12px 8px;
+  transition: color .3s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #FF6A3D, #65E6D9);
+  border-radius: 10px;
+  transform: translateX(-50%);
+  transition: width .35s ease;
+}
+.nav-link:hover { color: #FF6A3D; }
+.nav-link:hover::after,
+.nav-link.active::after { width: 65%; }
+.nav-link.active { color: #FF6A3D; }
+.nav-actions { display: flex; align-items: center; gap: 12px; margin-left: auto; flex-shrink: 0; }
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 4px;
+}
+
+/* Drawer */
+.nav-drawer-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+  z-index: 200;
+}
+.nav-drawer-overlay.open { display: block; }
+.nav-drawer {
+  position: absolute;
+  top: 0; right: 0;
+  width: min(320px, 100vw);
+  height: 100%;
+  background: #0A4A5B;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  box-shadow: -4px 0 32px rgba(0,0,0,.25);
+}
+.nav-drawer-close {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  margin-bottom: 8px;
+  padding: 4px;
+}
+.nav-drawer-close:hover { color: #FF6A3D; }
+.nav-drawer-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.nav-drawer-logo .nav-logo-img {
+  height: 38px;
+}
+.nav-drawer-link {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 15px 20px;
+  text-align: center;
+  transition: color .2s;
+}
+.nav-drawer-link:hover { color: #FF6A3D; background: transparent; }
+
+@media (max-width: 1024px) {
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .nav-hamburger:hover { color: #FF6A3D; }
+}
+@media (max-width: 480px) {
+  .nav-logo-img { height: 34px; }
+  .nav-inner { height: 60px; }
+}
+</style>
+
+<script is:inline>
+(function () {
+  var nav = document.querySelector('.nav-wrap');
+  function onScroll() {
+    if (window.scrollY > 40) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  var hamburger = document.getElementById('nav-hamburger');
+  var overlay   = document.getElementById('nav-drawer-overlay');
+  var closeBtn  = document.getElementById('nav-drawer-close');
+
+  function openDrawer()  { overlay.classList.add('open'); document.body.style.overflow = 'hidden'; hamburger.setAttribute('aria-expanded','true'); }
+  function closeDrawer() { overlay.classList.remove('open'); document.body.style.overflow = ''; hamburger.setAttribute('aria-expanded','false'); }
+
+  if (hamburger) hamburger.addEventListener('click', openDrawer);
+  if (closeBtn)  closeBtn.addEventListener('click', closeDrawer);
+  if (overlay)   overlay.addEventListener('click', function(e){ if(e.target === overlay) closeDrawer(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeDrawer(); });
+})();
+</script>

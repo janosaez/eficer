@@ -1,0 +1,165 @@
+---
+---
+
+<section class="problemas-section">
+  <div class="problemas-wrap">
+
+    <!-- LEFT: imagen -->
+    <div class="problemas-img-col">
+      <img
+        src="https://eficer.com/wp-content/uploads/2026/04/peru-softwres-control-patrimonial.png"
+        alt="Software de control patrimonial Perú"
+        loading="lazy"
+        class="problemas-img"
+      />
+    </div>
+
+    <!-- RIGHT: pain cards -->
+    <div class="eficer-pain-section">
+      <div class="eficer-pain-wrap">
+
+        <h2>¿Te pasa <span>esto?</span></h2>
+
+        <div class="eficer-pain-grid">
+          <div class="eficer-pain-card">
+            <div class="eficer-pain-icon">!</div>
+            <h3>Tienes observaciones en auditorías por inconsistencias</h3>
+          </div>
+          <div class="eficer-pain-card">
+            <div class="eficer-pain-icon">✕</div>
+            <h3>Tus activos están en Excel y no cuadran</h3>
+          </div>
+          <div class="eficer-pain-card">
+            <div class="eficer-pain-icon">⚠</div>
+            <h3>No sabes exactamente dónde están todos los bienes</h3>
+          </div>
+          <div class="eficer-pain-card">
+            <div class="eficer-pain-icon">↻</div>
+            <h3>Las depreciaciones se hacen manualmente (y con errores)</h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.problemas-section {
+  background: #04394C;
+}
+
+.problemas-wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 600px;
+}
+
+/* ── IMAGE ── */
+.problemas-img-col {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  padding-top: 40px;
+}
+.problemas-img {
+  max-width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  display: block;
+}
+
+/* ── PAIN SECTION ── */
+.eficer-pain-section {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 80px 20px 80px 40px;
+  color: #fff;
+}
+
+.eficer-pain-wrap {
+  text-align: center;
+}
+
+.eficer-pain-wrap h2 {
+  margin: 0 0 38px;
+  font-size: clamp(38px, 4vw, 62px);
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  color: #fff;
+}
+
+.eficer-pain-wrap h2 span { color: #FF6A3D; }
+
+.eficer-pain-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.eficer-pain-card {
+  padding: 30px 22px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(20,30,45,.95), rgba(40,34,42,.85));
+  border: 1px solid rgba(255,106,61,.25);
+  box-shadow: 0 22px 55px rgba(0,0,0,.25);
+  transition: .25s ease;
+}
+.eficer-pain-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,106,61,.55);
+  box-shadow: 0 28px 70px rgba(255,106,61,.14);
+}
+
+.eficer-pain-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,106,61,.14);
+  color: #FF6A3D;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.eficer-pain-card h3 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #fff;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .problemas-wrap {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .problemas-img-col {
+    padding: 40px 0 0;
+    max-height: 320px;
+    overflow: hidden;
+  }
+  .eficer-pain-section { padding: 60px 20px; }
+}
+
+@media (max-width: 767px) {
+  .problemas-wrap { max-width: 100%; padding: 0; }
+  .problemas-img-col { display: none; }
+  .eficer-pain-grid { grid-template-columns: 1fr; gap: 12px; }
+  .eficer-pain-section { padding: 40px 18px; }
+  .eficer-pain-wrap h2 { font-size: 32px; }
+}
+</style>

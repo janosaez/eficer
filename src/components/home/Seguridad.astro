@@ -1,0 +1,53 @@
+---
+const certs = [
+  { label: 'Encriptación SSL', icon: '🔒' },
+  { label: 'ISO 27001',        icon: '🏅' },
+  { label: 'SOC 2 Type II',    icon: '✅' },
+  { label: 'GDPR Compliant',   icon: '🛡️' },
+  { label: 'Datos 100% seguros', icon: '🔐' },
+  { label: 'Respaldo automático', icon: '☁️' },
+];
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-tag">Seguridad</div>
+      <h2 class="section-title">Tu información, siempre protegida</h2>
+      <p class="section-sub">Cumplimos con los más altos estándares internacionales de seguridad y privacidad de datos.</p>
+    </div>
+
+    <div class="sec-grid">
+      {certs.map(c => (
+        <div class="sec-card">
+          <div class="sec-icon">{c.icon}</div>
+          <div class="sec-label">{c.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+.sec-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+.sec-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.sec-icon { font-size: 1.6rem; }
+.sec-label { font-size: .78rem; font-weight: 600; color: var(--text-2); line-height: 1.3; }
+
+@media (max-width: 900px) { .sec-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 500px) { .sec-grid { grid-template-columns: repeat(2, 1fr); } }
+</style>

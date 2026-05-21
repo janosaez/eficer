@@ -1,0 +1,65 @@
+---
+---
+
+<div class="features-bar">
+  <div class="feature-item">
+    <div class="feature-icon"><span>✓</span></div>
+    Implementación rápida
+  </div>
+  <div class="feature-item">
+    <div class="feature-icon"><span>✓</span></div>
+    Soporte especializado
+  </div>
+  <div class="feature-item">
+    <div class="feature-icon"><span>✓</span></div>
+    Datos 100% seguros
+  </div>
+</div>
+
+<style>
+.features-bar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 25px 10px;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 20px rgba(0,0,0,.06);
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #0C2C38;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.feature-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #FDEDE6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.feature-icon span {
+  color: #FF5A2C;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .features-bar { flex-direction: column; align-items: center; gap: 16px; padding: 24px 20px; }
+  .feature-item { font-size: 15px; }
+}
+@media (max-width: 480px) {
+  .feature-item { font-size: 14px; }
+}
+</style>

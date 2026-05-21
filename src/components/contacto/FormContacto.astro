@@ -1,0 +1,366 @@
+---
+---
+
+<section class="fc-section">
+  <div class="fc-container">
+
+    <!-- ── LEFT: copy hero ── -->
+    <div class="eficer-contact-hero">
+      <span class="eficer-contact-label">CONTACTO</span>
+
+      <h1>
+        Evita observaciones en auditorías
+        <span>y toma el control total de tus activos</span>
+      </h1>
+
+      <p class="eficer-contact-intro">
+        Descubre cómo tener control total, eliminar errores y llegar preparado a tu próxima auditoría.
+      </p>
+
+      <div class="eficer-benefits-list">
+        <div class="eficer-benefit">
+          <div class="eficer-icon">✓</div>
+          <div>
+            <h3>Más de 16 años ayudando a instituciones</h3>
+            <p>Experiencia comprobada en control patrimonial.</p>
+          </div>
+        </div>
+        <div class="eficer-benefit">
+          <div class="eficer-icon">✓</div>
+          <div>
+            <h3>Reduce errores y observaciones en auditorías</h3>
+            <p>Información confiable y trazabilidad completa.</p>
+          </div>
+        </div>
+        <div class="eficer-benefit">
+          <div class="eficer-icon">✓</div>
+          <div>
+            <h3>Implementación guiada desde el inicio</h3>
+            <p>Acompañamiento en cada paso del proceso.</p>
+          </div>
+        </div>
+        <div class="eficer-benefit">
+          <div class="eficer-icon">✓</div>
+          <div>
+            <h3>Control total sin depender de Excel</h3>
+            <p>Centraliza, organiza y toma decisiones con información real.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="eficer-alert-box">
+        <div class="eficer-alert-icon">!</div>
+        <strong>Cada auditoría sin trazabilidad aumenta el riesgo de observaciones.</strong>
+      </div>
+
+      <div class="eficer-final-message">
+        El control patrimonial no se improvisa...<br />
+        <span>se gestiona antes de la auditoría.</span>
+      </div>
+    </div>
+
+    <!-- ── RIGHT: form card ── -->
+    <div class="eficer-form-card">
+      <div class="eficer-form-header">
+        <div class="header-flex">
+          <div class="calendar-circle">
+            <span class="calendar-icon">📅</span>
+          </div>
+          <div class="header-text">
+            <h2>Agenda tu demostración personalizada</h2>
+            <p>Completa tus datos y agenda tu demostración. Sin compromiso.</p>
+          </div>
+        </div>
+      </div>
+
+      <form
+        name="contacto-demo"
+        method="POST"
+        action="/gracias"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="eficer-contact-form"
+      >
+        <input type="hidden" name="form-name" value="contacto-demo" />
+        <p style="display:none"><label>No completar: <input name="bot-field" /></label></p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nombre *</label>
+            <input type="text" name="nombre_eficer" required minlength="3" placeholder="Tu nombre completo" />
+          </div>
+          <div class="form-group">
+            <label>Institución / Empresa *</label>
+            <input type="text" name="empresa_eficer" required minlength="3" placeholder="Nombre de tu institución" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Teléfono *</label>
+            <input type="tel" name="tel_eficer" required minlength="7" placeholder="+51 999 999 999" />
+          </div>
+          <div class="form-group">
+            <label>Correo electrónico</label>
+            <input type="email" name="email_eficer" placeholder="correo@institucion.gob.pe" />
+          </div>
+        </div>
+
+        <div class="form-group form-full">
+          <label>Mensaje opcional</label>
+          <textarea name="mensaje_eficer" placeholder="Cuéntanos brevemente sobre tu institución y tus necesidades"></textarea>
+        </div>
+
+        <div class="captcha-container">
+          <div class="g-recaptcha" data-sitekey="6LcxAOwsAAAAAHPBT28cbYLWHz6J0F6o_Xw_2EKr"></div>
+        </div>
+
+        <div class="eficer-security-box">
+          <div class="security-icon">🔒</div>
+          <div class="security-text">
+            <strong>Tu información está 100% segura</strong>
+            <p>No compartimos tu información con terceros.</p>
+          </div>
+        </div>
+
+        <button type="submit" class="eficer-submit-btn">
+          Agendar mi demostración personalizada
+        </button>
+
+        <div class="eficer-form-footer">
+          <span>⏱ Te contactamos en menos de 24 horas</span>
+          <span>🛡 Sin compromiso y sin riesgo</span>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<style>
+/* ── WRAPPER ── */
+.fc-section {
+  background: linear-gradient(135deg, #04394C 0%, #0A4A5B 60%, #04394C 100%);
+  padding: 120px 20px 100px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.fc-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ── LEFT COPY ── */
+.eficer-contact-hero {
+  color: #ffffff;
+  padding: 60px 20px 60px 0;
+}
+.eficer-contact-label {
+  display: inline-block;
+  color: #FF6B35;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  margin-bottom: 22px;
+}
+.eficer-contact-hero h1 {
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.05;
+  font-weight: 900;
+  margin: 0 0 24px;
+  max-width: 680px;
+}
+.eficer-contact-hero h1 span {
+  color: #FF6B35;
+  display: block;
+}
+.eficer-contact-intro {
+  font-size: 20px;
+  line-height: 1.7;
+  max-width: 620px;
+  margin-bottom: 42px;
+  color: rgba(255,255,255,.85);
+}
+.eficer-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 38px;
+}
+.eficer-benefit {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.eficer-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  background: #FF6B35;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 22px;
+}
+.eficer-benefit h3 {
+  font-size: 19px;
+  font-weight: 900;
+  margin: 0 0 5px;
+  color: #ffffff;
+}
+.eficer-benefit p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  color: rgba(255,255,255,.82);
+}
+.eficer-alert-box {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border: 1.5px solid rgba(255,107,53,.75);
+  border-radius: 18px;
+  padding: 22px 24px;
+  max-width: 620px;
+  margin-bottom: 36px;
+  background: rgba(255,107,53,.06);
+}
+.eficer-alert-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 14px;
+  background: #FF6B35;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.eficer-alert-box strong {
+  font-size: 22px;
+  line-height: 1.35;
+  color: #ffffff;
+}
+.eficer-final-message {
+  font-size: 28px;
+  line-height: 1.25;
+  color: rgba(255,255,255,.85);
+  font-weight: 700;
+}
+.eficer-final-message span {
+  color: #FF6B35;
+  font-weight: 900;
+}
+
+/* ── RIGHT FORM CARD ── */
+.eficer-form-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,.35);
+  background: #ffffff;
+}
+.eficer-form-header {
+  background: linear-gradient(135deg, #04394C, #0A4A5B);
+  padding: 24px 28px;
+}
+.header-flex { display: flex; align-items: center; gap: 16px; }
+.calendar-circle {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+}
+.header-text h2 { color: #fff; font-size: 1.05rem; font-weight: 700; margin: 0 0 4px; line-height: 1.3; }
+.header-text p  { color: rgba(255,255,255,.7); font-size: .82rem; margin: 0; }
+
+.eficer-contact-form {
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.form-row   { display: contents; }
+.form-full  { grid-column: 1 / -1; }
+.form-group { display: flex; flex-direction: column; gap: 5px; }
+.form-group label { font-size: .78rem; font-weight: 600; color: #374151; }
+.form-group input,
+.form-group textarea {
+  padding: 10px 13px;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 8px;
+  font-size: .88rem;
+  color: #111827;
+  font-family: inherit;
+  transition: border-color .15s;
+}
+.form-group input:focus,
+.form-group textarea:focus { outline: none; border-color: #0A4A5B; }
+.form-group textarea { resize: vertical; min-height: 88px; }
+
+.captcha-container { grid-column: 1/-1; transform: scale(.88); transform-origin: left; }
+
+.eficer-security-box {
+  grid-column: 1/-1;
+  display: flex; align-items: center; gap: 10px;
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.security-icon { font-size: 1.2rem; flex-shrink: 0; }
+.security-text strong { font-size: .82rem; color: #15803D; display: block; }
+.security-text p { font-size: .76rem; color: #166534; margin: 0; }
+
+.eficer-submit-btn {
+  grid-column: 1/-1;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #FF6B35, #E55A2B);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: .95rem;
+  font-weight: 800;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all .25s ease;
+  box-shadow: 0 8px 20px rgba(255,107,53,.3);
+}
+.eficer-submit-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(255,107,53,.45); }
+
+.eficer-form-footer {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: .75rem;
+  color: #6B7280;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .fc-container { grid-template-columns: 1fr; gap: 0; }
+  .eficer-contact-hero { padding: 60px 0 40px; }
+}
+@media (max-width: 767px) {
+  .fc-section { padding: 100px 18px 80px; }
+  .eficer-contact-hero h1 { font-size: 38px; }
+  .eficer-contact-intro { font-size: 17px; }
+  .eficer-alert-box strong { font-size: 18px; }
+  .eficer-final-message { font-size: 22px; }
+  .eficer-contact-form { grid-template-columns: 1fr; }
+  .captcha-container { transform: scale(.78); }
+}
+</style>

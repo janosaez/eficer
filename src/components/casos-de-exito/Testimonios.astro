@@ -1,0 +1,210 @@
+---
+const logos = [
+  { src: 'https://eficer.com/wp-content/uploads/2025/08/sunarp_resizer.png',        alt: 'SUNARP',    cls: 'logo-sunarp' },
+  { src: 'https://eficer.com/wp-content/uploads/2025/08/Lurigancho-Version-6.png',  alt: 'Lurigancho',cls: 'logo-lurigancho' },
+  { src: 'https://eficer.com/wp-content/uploads/2025/08/PSI-Version-2.png',         alt: 'PSI',       cls: 'logo-psi' },
+  { src: 'https://eficer.com/wp-content/uploads/2025/08/logo_senace-scaled.png',    alt: 'SENACE',    cls: 'logo-senace' },
+  { src: 'https://eficer.com/wp-content/uploads/2025/08/Ositran-Version-4.png',     alt: 'OSITRAN',   cls: 'logo-ositran' },
+  { src: 'https://eficer.com/wp-content/uploads/2026/05/acenespar-logo.png',        alt: 'ACENESPAR', cls: 'logo-acenespar' },
+  { src: 'https://eficer.com/wp-content/uploads/2026/05/bnp-logo.png',              alt: 'BNP',       cls: 'logo-bnp' },
+  { src: 'https://eficer.com/wp-content/uploads/2026/05/alisur.png',                alt: 'ALISUR',    cls: 'logo-alisur' },
+];
+
+const testimonios = [
+  {
+    texto: '🔥 <b>Eliminamos inconsistencias en auditorías</b><br>"Antes teníamos dificultades para mantener información actualizada de nuestros activos. Con Éficer logramos organizar todo en un solo sistema y reducir errores que generaban observaciones en auditorías."',
+    avatar: 'https://eficer.com/wp-content/uploads/2025/02/aaaaaa.png',
+    nombre: 'Eliana Garate',
+    rol: 'SUNARP Arequipa',
+  },
+  {
+    texto: '🔥 <b>Ahora accedemos a información confiable en segundos</b><br>"El sistema nos permitió tener control total de nuestros activos y acceder a información precisa de forma inmediata, sin depender de registros manuales."',
+    avatar: 'https://eficer.com/wp-content/uploads/2025/02/karolay.png',
+    nombre: 'Karolay Ancalle',
+    rol: 'Municipalidad de Cerro Colorado',
+  },
+  {
+    texto: '🔥 <b>Dejamos de depender de Excel para el control patrimonial</b><br>"Éficer nos ayudó a centralizar toda la información y mejorar el control de nuestros activos, evitando inconsistencias y mejorando la gestión."',
+    avatar: 'https://eficer.com/wp-content/uploads/2025/02/rosario.png',
+    nombre: 'Rosario Orue',
+    rol: 'OSITRAN',
+  },
+  {
+    texto: '🔥 <b>Mejoramos el control y la planificación interna</b><br>"El sistema nos permitió acceder a la información en segundos y coordinar mejor nuestras actividades sin errores ni retrasos."',
+    avatar: 'https://eficer.com/wp-content/uploads/2025/08/Zamaida-Mamani.png',
+    nombre: 'Zenaida Mamani',
+    rol: 'IESTP Ayavari',
+  },
+  {
+    texto: '🔥 <b>Optimizaron nuestra gestión y toma de decisiones</b><br>"Gracias a Éficer, mejoramos la organización de nuestros activos y ahora tomamos decisiones más rápidas basadas en información confiable."',
+    avatar: 'https://eficer.com/wp-content/uploads/2025/08/Walter-Muro.png',
+    nombre: 'Walter Muro',
+    rol: 'Municipalidad Provincial de Lambayeque',
+  },
+];
+---
+
+<section class="casos-exito">
+
+  <!-- Header -->
+  <div class="section-header">
+    <h2 class="section-title">
+      <span>Resultados reales</span> en instituciones<br>como la tuya
+    </h2>
+    <p class="section-subtitle main-subtitle">Más de 50 instituciones ya utilizan nuestro Software</p>
+    <p class="section-subtitle second-subtitle">
+      Si instituciones como estas ya mejoraron su control patrimonial… ¿qué pasa si tú sigues igual?
+    </p>
+  </div>
+
+  <!-- Logos carousel -->
+  <div class="clientes-logos">
+    <div class="logos-container">
+      {[...logos, ...logos, ...logos].map(l => (
+        <div class="logo-item">
+          <img src={l.src} alt={l.alt} class={l.cls} loading="lazy" />
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Testimonios -->
+  <div class="testimonios-grid">
+    {testimonios.map(t => (
+      <div class="testimonio-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonio-text" set:html={t.texto} />
+        <div class="testimonio-author">
+          <img src={t.avatar} alt={t.nombre} class="author-avatar" loading="lazy" />
+          <div class="author-info">
+            <div class="author-name">{t.nombre}</div>
+            <div class="author-role">{t.rol}</div>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Frase auditoría -->
+  <div class="auditoria-highlight">
+    <div class="auditoria-line"></div>
+    <h3>Elimina errores y observaciones en auditorías</h3>
+    <p>Sin Excel. Sin errores. Sin observaciones.</p>
+  </div>
+
+</section>
+
+<style>
+.casos-exito {
+  width: 100%;
+  padding: 80px 2rem;
+  background: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header */
+.section-header { text-align: center; margin-bottom: 4rem; }
+.section-title {
+  color: #003E55;
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 900; line-height: 1.25; margin-bottom: 22px;
+}
+.section-title span { color: #FF6B35; }
+.section-subtitle {
+  margin-top: 10px; color: #5f6f75;
+  max-width: 680px; margin-left: auto; margin-right: auto;
+  font-size: 19px; line-height: 1.7;
+}
+.main-subtitle { font-size: 20px; font-weight: 700; color: #3f555c; }
+.second-subtitle { font-size: 18px; font-weight: 600; }
+
+/* Logos carousel */
+.clientes-logos {
+  position: relative; overflow: hidden;
+  background: #ffffff; border-radius: 16px;
+  padding: 2rem; margin-bottom: 5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+}
+.clientes-logos::before,
+.clientes-logos::after {
+  content: '';
+  position: absolute; top: 0;
+  width: 80px; height: 100%; z-index: 2;
+}
+.clientes-logos::before { left: 0; background: linear-gradient(to right, #fff, transparent); }
+.clientes-logos::after  { right: 0; background: linear-gradient(to left, #fff, transparent); }
+
+.logos-container {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  width: max-content;
+  animation: scroll 22s linear infinite;
+}
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
+.logo-item {
+  flex: 0 0 auto;
+  width: 230px; height: 110px;
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-item img {
+  width: auto; height: 62px;
+  object-fit: contain;
+  transition: transform .3s ease;
+}
+.logo-item img:hover { transform: scale(1.05); }
+
+/* Logo size overrides */
+.logo-ositran   { height: 80px !important; }
+.logo-sunarp    { height: 128px !important; }
+.logo-lurigancho{ height: 118px !important; }
+.logo-senace    { height: 40px !important; }
+.logo-psi       { height: 132px !important; }
+.logo-acenespar { height: 132px !important; }
+.logo-bnp       { height: 118px !important; }
+.logo-alisur    { height: 132px !important; }
+
+/* Testimonios */
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.testimonio-card {
+  border: 1px solid #eee; border-radius: 16px;
+  padding: 2rem; background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,.05);
+}
+.stars { color: #FFD700; margin-bottom: 1rem; font-size: 1.1rem; }
+.testimonio-text {
+  color: #5f6f75; font-style: italic; margin-bottom: 1.5rem;
+  font-size: .9rem; line-height: 1.65;
+}
+.testimonio-author { display: flex; align-items: center; gap: 10px; }
+.author-avatar { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; }
+.author-name { font-weight: 700; color: #003E55; }
+.author-role { font-size: 13px; color: #FF6B35; }
+
+/* Auditoria highlight */
+.auditoria-highlight { text-align: center; padding: 70px 20px 60px; max-width: 1400px; margin: 0 auto; }
+.auditoria-line { width: 120px; height: 2px; background: #FF6B35; margin: 0 auto 35px; border-radius: 20px; }
+.auditoria-highlight h3 {
+  font-size: clamp(30px, 4vw, 50px); line-height: 1.2;
+  font-weight: 900; color: #003E55;
+  max-width: 950px; margin: 0 auto 20px;
+}
+.auditoria-highlight p {
+  font-size: 18px; font-weight: 800;
+  color: #FF6B35; text-transform: uppercase; letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .casos-exito { padding: 60px 1.5rem; }
+  .testimonios-grid { grid-template-columns: 1fr; }
+}
+</style>

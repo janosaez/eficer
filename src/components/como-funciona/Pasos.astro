@@ -1,0 +1,290 @@
+---
+---
+
+<section class="cf-section" id="como-funciona">
+  <div class="como-funciona">
+
+    <div class="section-header">
+      <h2 class="section-title">
+        Cómo eliminar <span>errores y observaciones</span> en auditorías
+      </h2>
+      <p class="section-subtitle">Sin Excel. Sin errores. Sin observaciones.</p>
+    </div>
+
+    <div class="steps-container">
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-icon">📤</div>
+        <h3 class="step-title">Deja atrás el caos en Excel</h3>
+        <p class="step-description">
+          Importa y organiza tus activos en una sola plataforma con trazabilidad desde el primer día.
+        </p>
+        <div class="step-features">
+          <div class="step-feature">Sin reprocesos</div>
+          <div class="step-feature">Sincronización automática</div>
+          <div class="step-feature">Sin perder datos históricos</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-icon">🔍</div>
+        <h3 class="step-title">Evita observaciones antes de que ocurran</h3>
+        <p class="step-description">
+          Controla responsables, movimientos y auditorías con trazabilidad completa.
+        </p>
+        <div class="step-features">
+          <div class="step-feature">Auditorías simplificadas</div>
+          <div class="step-feature">Asignación de responsables</div>
+          <div class="step-feature">Historial de cambios completo</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-icon">📈</div>
+        <h3 class="step-title">Convierte datos patrimoniales en decisiones seguras</h3>
+        <p class="step-description">
+          Obtén reportes automáticos, alertas y control ejecutivo en tiempo real.
+        </p>
+        <div class="step-features">
+          <div class="step-feature">Reportes personalizados</div>
+          <div class="step-feature">Alertas automáticas</div>
+          <div class="step-feature">Dashboards ejecutivos</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA + VIDEO -->
+    <div class="cta-section">
+      <h3 class="cta-title">Mira cómo funciona <span>Éficer</span></h3>
+      <p class="cta-description">Descubre en menos de 3 minutos cómo simplificar tu gestión de activos.</p>
+
+      <div class="video-container">
+        <video controls preload="none">
+          <source src="https://eficer.com/wp-content/uploads/2025/09/VIDEO-EFICER-V3-1.mp4" type="video/mp4">
+          Tu navegador no soporta videos HTML5.
+        </video>
+      </div>
+
+      <h3 class="cta-title" style="margin-top:3rem">¿Listo para <span>simplificar</span> tu gestión?</h3>
+      <p class="cta-description">
+        Únete a empresas que ya controlan sus activos sin complicaciones. Solicita tu demo gratuita hoy.
+      </p>
+      <a href="/contacto" class="cta-button">📅 Solicita tu Demo Gratuita</a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+:root {
+  --primary:       #FF6B35;
+  --primary-dark:  #E55A2B;
+  --primary-light: #FF8C5A;
+  --dark-bg:       #0f1419;
+  --dark-bg-alt:   #1a1f2e;
+  --text-light:    #f5f5f5;
+  --text-muted:    #a0a0a0;
+  --cf-accent:     #4ecdc4;
+}
+
+.cf-section {
+  background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-bg-alt) 100%);
+}
+
+.como-funciona {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 2rem 100px;
+}
+
+/* Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 5rem;
+  animation: titleSlide .9s ease-out;
+}
+@keyframes titleSlide {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.section-title {
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+  color: var(--text-light);
+}
+.section-title span {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.section-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.3;
+}
+
+/* Steps */
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .steps-container::before {
+    content: '';
+    position: absolute;
+    top: 80px; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary), var(--cf-accent), transparent);
+    z-index: 0;
+  }
+}
+.step {
+  background: linear-gradient(135deg, rgba(255,107,53,.10), rgba(78,205,196,.05));
+  border: 1px solid rgba(255,107,53,.3);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  transition: all .3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  animation: stepSlide .9s ease-out forwards;
+  opacity: 0;
+  z-index: 1;
+}
+.step:nth-child(1) { animation-delay: .1s; }
+.step:nth-child(2) { animation-delay: .2s; }
+.step:nth-child(3) { animation-delay: .3s; }
+@keyframes stepSlide {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.step:hover {
+  background: linear-gradient(135deg, rgba(255,107,53,.15), rgba(78,205,196,.10));
+  border-color: rgba(255,107,53,.5);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(255,107,53,.2);
+}
+.step-number {
+  position: absolute;
+  top: 0; right: 0;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  width: 60px; height: 60px;
+  border-radius: 20px 0 20px 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem; font-weight: 900;
+  box-shadow: 0 10px 25px rgba(255,107,53,.3);
+}
+.step-icon {
+  width: 80px; height: 80px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 25px rgba(255,107,53,.25);
+}
+.step-title {
+  font-size: 1.4rem; font-weight: 800;
+  margin-bottom: .75rem; color: var(--text-light);
+}
+.step-description {
+  color: var(--text-muted); font-size: .95rem;
+  line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;
+}
+.step-features { display: flex; flex-direction: column; gap: .75rem; }
+.step-feature {
+  display: flex; align-items: flex-start; gap: .75rem;
+  font-size: .9rem; color: var(--text-muted);
+}
+.step-feature::before {
+  content: '✓';
+  color: var(--primary); font-weight: 900; font-size: 1.1rem; flex-shrink: 0;
+}
+
+/* CTA + video */
+.cta-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba(255,107,53,.10), rgba(78,205,196,.05));
+  border: 1px solid rgba(255,107,53,.3);
+  border-radius: 20px;
+  animation: ctaSlide .9s ease-out .4s both;
+}
+@keyframes ctaSlide {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.cta-title {
+  font-size: 2rem; font-weight: 800;
+  margin-bottom: 1rem; letter-spacing: -.5px;
+  color: var(--text-light);
+}
+.cta-title span {
+  background: linear-gradient(135deg, var(--primary), var(--cf-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.cta-description {
+  color: var(--text-muted); font-size: 1rem;
+  margin-bottom: 2rem; max-width: 600px;
+  margin-left: auto; margin-right: auto; line-height: 1.6;
+}
+.video-container {
+  position: relative; width: 100%; padding-bottom: 56.25%; height: 0;
+  overflow: hidden; border-radius: 15px;
+  border: 1px solid rgba(255,107,53,.2);
+  background: #000; margin: 2rem 0;
+}
+.video-container video {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none; border-radius: 15px;
+}
+.cta-button {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white; border: none;
+  padding: 1.2rem 3rem; border-radius: 14px;
+  font-weight: 700; font-size: 1rem;
+  cursor: pointer; text-decoration: none;
+  transition: all .3s cubic-bezier(.25,.46,.45,.94);
+  box-shadow: 0 15px 35px rgba(255,107,53,.35);
+  display: inline-flex; align-items: center; gap: .7rem;
+  letter-spacing: .5px; position: relative; overflow: hidden;
+  font-family: inherit;
+}
+.cta-button::before {
+  content: '';
+  position: absolute; top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);
+  transition: left .6s ease;
+}
+.cta-button:hover::before { left: 100%; }
+.cta-button:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(255,107,53,.45); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .como-funciona { padding: 60px 1.5rem; }
+  .section-title { font-size: 2.2rem; }
+  .steps-container { gap: 2rem; }
+  .step { padding: 2rem 1.5rem; }
+  .step-icon { width: 70px; height: 70px; font-size: 2rem; }
+  .step-title { font-size: 1.2rem; }
+  .cta-title { font-size: 1.5rem; }
+  .cta-button { padding: 1rem 2rem; font-size: .95rem; }
+}
+</style>

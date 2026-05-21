@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FAQ from '../components/antes-de-decidir/FAQ.astro';
+
+const waLink = "https://wa.me/51999252787?text=Hola%2C%20quiero%20saber%20c%C3%B3mo%20evitar%20observaciones%20en%20auditor%C3%ADas%20y%20mejorar%20el%20control%20de%20nuestros%20activos.%20%C2%BFPodr%C3%ADan%20orientarme%3F";
+---
+
+<BaseLayout
+  title="Antes de decidir"
+  description="Resolvemos todas tus dudas antes de implementar Éficer. Compatibilidad con SINABIP, migración desde Excel y más."
+>
+
+  <!-- ── HERO ── -->
+  <section class="decidir-hero-wrap">
+    <div class="eficer-decidir-hero">
+
+      <span class="eficer-decidir-label">ANTES DE DECIDIR</span>
+
+      <h1>
+        Antes de decidir,
+        <span>asegúrate de tener control real.</span>
+      </h1>
+
+      <p class="eficer-decidir-subtitle">
+        Estas son las dudas más comunes antes de implementar un sistema de control patrimonial…
+        y las razones por las que muchas instituciones deciden dejar atrás Excel.
+      </p>
+
+      <div class="eficer-warning-box">
+        <strong>Las observaciones en auditorías no aparecen de un día para otro.</strong>
+        <p>Se acumulan por falta de control.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <FAQ />
+
+  <!-- ── CTA FINAL ── -->
+  <section class="eficer-final-cta">
+    <div class="eficer-final-cta-inner">
+
+      <span>DA EL SIGUIENTE PASO</span>
+
+      <h2>
+        Si estas dudas ya están claras,
+        <strong>es momento de verlo funcionando en tu institución.</strong>
+      </h2>
+
+      <p>
+        Agenda una demostración personalizada y descubre cómo reducir errores,
+        mejorar el control patrimonial y prepararte mejor para auditorías.
+      </p>
+
+      <div class="eficer-final-buttons">
+        <a href="/contacto" class="eficer-final-btn primary-btn">
+          Solicitar demostración gratuita
+        </a>
+        <a href={waLink} target="_blank" rel="noopener" class="eficer-final-btn secondary-btn">
+          💬 Hablar por WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+/* ── HERO ── */
+.decidir-hero-wrap {
+  background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%);
+}
+.eficer-decidir-hero {
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px 20px 100px;
+}
+.eficer-decidir-label {
+  display: inline-block;
+  color: #FF6B35;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+.eficer-decidir-hero h1 {
+  font-size: clamp(46px, 6vw, 82px);
+  line-height: 1.05;
+  font-weight: 900;
+  margin: 0 auto 28px;
+  max-width: 980px;
+}
+.eficer-decidir-hero h1 span {
+  display: block;
+  color: #FF6B35;
+}
+.eficer-decidir-subtitle {
+  font-size: 22px;
+  line-height: 1.7;
+  color: rgba(255,255,255,.82);
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+.eficer-warning-box {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 28px 34px;
+  border: 1.5px solid rgba(255,107,53,.5);
+  border-radius: 24px;
+  background: rgba(255,107,53,.06);
+}
+.eficer-warning-box strong {
+  display: block;
+  font-size: 28px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.eficer-warning-box p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #FF6B35;
+}
+
+/* ── CTA FINAL ── */
+.eficer-final-cta {
+  font-family: 'Segoe UI', sans-serif;
+  background: #003E55;
+  color: #ffffff;
+  text-align: center;
+  padding: 110px 20px;
+}
+.eficer-final-cta-inner { max-width: 1050px; margin: 0 auto; }
+.eficer-final-cta span {
+  display: inline-block;
+  color: #FF6B35;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.eficer-final-cta h2 {
+  font-size: clamp(38px, 5vw, 72px);
+  line-height: 1.08;
+  font-weight: 900;
+  margin: 0 auto 28px;
+  max-width: 980px;
+}
+.eficer-final-cta h2 strong { display: block; color: #FF6B35; }
+.eficer-final-cta p {
+  color: rgba(255,255,255,.85);
+  font-size: 22px;
+  line-height: 1.7;
+  max-width: 820px;
+  margin: 0 auto 42px;
+}
+.eficer-final-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.eficer-final-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  height: 72px;
+  padding: 0 34px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 800;
+  transition: .25s ease;
+}
+.primary-btn {
+  background: #FF6B35;
+  color: #ffffff;
+  border: 2px solid #FF6B35;
+}
+.primary-btn:hover { background: #E55A2B; border-color: #E55A2B; transform: translateY(-2px); }
+.secondary-btn {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,.9);
+}
+.secondary-btn:hover { background: #ffffff; color: #003E55; transform: translateY(-2px); }
+
+@media (max-width: 767px) {
+  .eficer-decidir-hero { padding: 100px 20px 80px; }
+  .eficer-decidir-hero h1 { font-size: 44px; }
+  .eficer-decidir-subtitle { font-size: 18px; }
+  .eficer-warning-box strong { font-size: 22px; }
+  .eficer-final-cta { padding: 80px 18px; }
+  .eficer-final-cta h2 { font-size: 40px; }
+  .eficer-final-cta p { font-size: 18px; }
+  .eficer-final-buttons { flex-direction: column; gap: 16px; }
+  .eficer-final-btn { width: 100%; min-width: 100%; font-size: 17px; }
+}
+</style>

@@ -1,0 +1,195 @@
+---
+const faqs = [
+  {
+    q: '¿Cómo me ayuda a reducir observaciones en auditorías?',
+    a: [
+      'El sistema centraliza toda la información de tus activos, registra cada movimiento y mantiene trazabilidad completa por bien, evitando inconsistencias que son una de las principales causas de observaciones en auditorías.',
+      'Además, automatiza procesos como depreciaciones y control de cambios, reduciendo errores manuales.',
+    ],
+    strong: 'Esto se traduce en mayor control, orden y respaldo ante cualquier auditoría.',
+  },
+  {
+    q: '¿Es compatible con SINABIP y PLE?',
+    a: [
+      'Sí. El sistema está alineado con los lineamientos de control patrimonial exigidos por la normativa vigente, incluyendo estructuras compatibles con SINABIP y PLE.',
+      'Esto facilita el cumplimiento y la preparación de información ante auditorías.',
+    ],
+    strong: 'No tendrás que adaptar tu proceso… el sistema se adapta a tu normativa.',
+  },
+  {
+    q: '¿Qué pasa con nuestra información actual en Excel?',
+    a: [
+      'Puedes importar tu información existente de manera rápida y ordenada, centralizando todos tus registros sin perder historial.',
+      'Además, eliminas el riesgo de inconsistencias, duplicidad de datos y errores manuales propios de Excel.',
+    ],
+    strong: 'No pierdes lo que tienes… lo conviertes en control real.',
+  },
+  {
+    q: '¿Cuánto tiempo toma empezar a ver resultados?',
+    a: [
+      'Desde los primeros días tendrás visibilidad y control sobre tus activos.',
+      'La información se centraliza de inmediato, permitiéndote reducir errores y mejorar el control patrimonial desde el inicio.',
+      'No necesitas esperar meses para ver orden y control.',
+    ],
+    strong: 'Los beneficios se perciben rápidamente, especialmente en control y orden.',
+  },
+  {
+    q: '¿No es más fácil seguir usando Excel?',
+    a: [
+      'Excel puede funcionar para registros básicos, pero no ofrece trazabilidad, control de cambios ni seguridad en la información.',
+      'Esto es lo que generalmente genera observaciones en auditorías.',
+    ],
+    strong: 'Excel funciona… hasta que necesitas control real.',
+  },
+  {
+    q: '¿Mi equipo podrá adaptarse fácilmente?',
+    a: [
+      'Sí. El sistema está diseñado para ser intuitivo y se incluye capacitación durante la implementación.',
+    ],
+    strong: 'Tu equipo no necesita ser experto, solo necesita una herramienta más ordenada, confiable y fácil de usar.',
+  },
+  {
+    q: '¿Qué pasa si no implemento un sistema?',
+    a: [
+      'Seguir dependiendo de procesos manuales aumenta el riesgo de errores, pérdida de información y observaciones en auditorías.',
+    ],
+    strong: 'No implementar un sistema no elimina el problema… lo mantiene y lo incrementa con cada auditoría.',
+  },
+];
+---
+
+<section class="eficer-faq-section">
+
+  <div class="eficer-faq-header">
+    <span>Preguntas clave</span>
+    <h2>Dudas que suelen aparecer antes de tomar una buena decisión</h2>
+    <p>
+      Antes de implementar un sistema de control patrimonial, es normal tener preguntas.
+      Aquí respondemos las más importantes.
+    </p>
+  </div>
+
+  <div class="eficer-faq-grid">
+    {faqs.map(f => (
+      <details class="eficer-faq-card">
+        <summary>{f.q}</summary>
+        <div class="eficer-faq-content">
+          {f.a.map(p => <p>{p}</p>)}
+          <strong>{f.strong}</strong>
+        </div>
+      </details>
+    ))}
+  </div>
+
+</section>
+
+<style>
+.eficer-faq-section {
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
+  padding: 100px 20px;
+}
+.eficer-faq-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+.eficer-faq-header span {
+  display: inline-block;
+  color: #FF6B35;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.eficer-faq-header h2 {
+  color: #003E55;
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.1;
+  font-weight: 900;
+  margin: 0 0 22px;
+}
+.eficer-faq-header p {
+  color: #5f6f75;
+  font-size: 20px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.eficer-faq-grid {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  gap: 22px;
+}
+
+.eficer-faq-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,62,85,.12);
+  border-radius: 22px;
+  box-shadow: 0 14px 40px rgba(0,0,0,.06);
+  overflow: hidden;
+  transition: .3s ease;
+}
+.eficer-faq-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,107,53,.45);
+  box-shadow: 0 20px 50px rgba(0,0,0,.09);
+}
+
+.eficer-faq-card summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 28px 78px 28px 34px;
+  color: #003E55;
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 900;
+  position: relative;
+}
+.eficer-faq-card summary::-webkit-details-marker { display: none; }
+.eficer-faq-card summary::after {
+  content: '+';
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: rgba(255,107,53,.12);
+  color: #FF6B35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1;
+}
+.eficer-faq-card[open] summary::after {
+  content: '−';
+  background: #FF6B35;
+  color: #ffffff;
+}
+
+.eficer-faq-content {
+  padding: 0 34px 34px;
+  color: #5f6f75;
+  font-size: 18px;
+  line-height: 1.75;
+}
+.eficer-faq-content p { margin: 0 0 16px; }
+.eficer-faq-content strong {
+  display: block;
+  color: #FF6B35;
+  font-size: 19px;
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .eficer-faq-section { padding: 70px 18px; }
+  .eficer-faq-card summary { font-size: 20px; padding: 24px 68px 24px 26px; }
+  .eficer-faq-content { padding: 0 26px 28px; font-size: 16px; }
+}
+</style>

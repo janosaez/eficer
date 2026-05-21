@@ -1,0 +1,231 @@
+---
+const features = [
+  { n: '01.', title: 'Evita errores antes de una auditoría',        desc: 'Automatiza el control de tus activos y elimina inconsistencias que generan observaciones.' },
+  { n: '02.', title: 'Ten trazabilidad total de cada activo',        desc: 'Accede al historial completo, responsables y movimientos sin depender de Excel.' },
+  { n: '03.', title: 'Elimina Excel de tu gestión patrimonial',      desc: 'Centraliza toda la información en un solo sistema y reduce procesos manuales.' },
+];
+
+const caracteristicas = [
+  {
+    img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop',
+    alt: 'Control de Bienes',
+    icon: '⚖️',
+    title: 'Ten control total de cada activo',
+    desc: 'Ubica, registra y controla cada bien sin pérdida de información ni errores en auditorías.',
+  },
+  {
+    img: 'https://mlqotftoxqjw.i.optimole.com/cb:H3JV.f9b/w:360/h:450/q:mauto/f:best/https://eficer.com/wp-content/uploads/2025/08/etiquetas_eficer.png',
+    alt: 'Gestión Eficiente',
+    icon: '📊',
+    title: 'Elimina errores y procesos manuales',
+    desc: 'Automatiza registros, traslados e inventarios y deja atrás el uso de Excel.',
+  },
+  {
+    img: 'https://mlqotftoxqjw.i.optimole.com/cb:H3JV.f9b/rt:fill/w:360/h:450/q:mauto/f:best/https://eficer.com/wp-content/uploads/2025/05/pexels-photo-12899079-1.jpeg',
+    alt: 'Seguimiento en Tiempo Real',
+    icon: '🚀',
+    title: 'Evita observaciones con trazabilidad completa',
+    desc: 'Accede al historial de cada activo, controla movimientos y asegura información confiable.',
+  },
+];
+---
+
+<section class="ben-section">
+  <div class="beneficios">
+
+    <div class="section-header">
+      <h2 class="section-title">Lo que cambia <span>en tu control patrimonial</span></h2>
+      <p class="section-subtitle">
+        Es un software diseñado para organizar los Bienes Patrimoniales a nivel Administrativo y Contable
+        con diferentes opciones de fácil manejo que te ayudarán en la encomiable labor de Control de los
+        Activos Fijos de la institución.
+      </p>
+    </div>
+
+    <!-- Feature boxes -->
+    <div class="features-grid">
+      {features.map((f, i) => (
+        <div class="feature-box" style={`animation-delay:${.3 + i * .1}s`}>
+          <div class="feature-number">{f.n}</div>
+          <h3 class="feature-title">{f.title}</h3>
+          <p class="feature-description">{f.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Características con imágenes -->
+    <div class="caracteristicas-section">
+      {caracteristicas.map((c, i) => (
+        <div class="caracteristica-card" style={`animation-delay:${.1 + i * .1}s`}>
+          <div class="caracteristica-imagen">
+            <img src={c.img} alt={c.alt} loading="lazy" />
+          </div>
+          <div class="caracteristica-content">
+            <div class="caracteristica-icono">{c.icon}</div>
+            <h3 class="caracteristica-titulo">{c.title}</h3>
+            <p class="caracteristica-descripcion">{c.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<style>
+:root {
+  --ben-primary:      #FF6B35;
+  --ben-primary-light:#FF8C5A;
+  --ben-dark:         #0f1419;
+  --ben-dark-alt:     #1a1f2e;
+  --ben-text:         #f5f5f5;
+  --ben-muted:        #a0a0a0;
+  --ben-accent:       #4ecdc4;
+  --blue-dark:        #003d5c;
+  --blue-medium:      #004d73;
+}
+
+.ben-section {
+  background: linear-gradient(135deg, var(--ben-dark) 0%, var(--ben-dark-alt) 100%);
+}
+
+.beneficios {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: titleSlide .9s ease-out;
+}
+@keyframes titleSlide {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.section-title {
+  font-size: 3.2rem; font-weight: 900;
+  margin-bottom: 1rem; letter-spacing: -1px; color: var(--ben-text);
+}
+.section-title span {
+  background: linear-gradient(135deg, var(--ben-primary), var(--ben-primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.section-subtitle {
+  font-size: 1.15rem; color: var(--ben-muted);
+  max-width: 900px; margin: 0 auto; line-height: 1.8; text-align: center;
+}
+
+/* Features grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-top: 2rem;
+}
+.feature-box {
+  background: linear-gradient(135deg, rgba(255,107,53,.08), rgba(78,205,196,.05));
+  border: 1px solid rgba(255,107,53,.2);
+  border-radius: 16px;
+  padding: 2.5rem;
+  transition: all .3s ease;
+  animation: featureSlide .9s ease-out forwards;
+  opacity: 0;
+  position: relative;
+}
+@keyframes featureSlide {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.feature-box::before {
+  content: '✓';
+  position: absolute; top: 1.5rem; right: 1.5rem;
+  width: 40px; height: 40px;
+  background: linear-gradient(135deg, var(--ben-primary), var(--ben-primary-light));
+  color: white; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 900; font-size: 1.3rem;
+  opacity: 0; transform: scale(.5) rotate(-180deg);
+  transition: all .4s cubic-bezier(.25,.46,.45,.94);
+  box-shadow: 0 8px 20px rgba(255,107,53,.3);
+}
+.feature-box:hover::before { opacity: 1; transform: scale(1) rotate(0deg); }
+.feature-box:hover {
+  background: linear-gradient(135deg, rgba(255,107,53,.12), rgba(78,205,196,.08));
+  border-color: rgba(255,107,53,.4);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(255,107,53,.15);
+}
+.feature-number {
+  font-size: 1.2rem; font-weight: 900;
+  background: linear-gradient(135deg, var(--ben-primary), var(--ben-primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: .8rem; letter-spacing: 1px;
+}
+.feature-title {
+  font-size: 1.3rem; font-weight: 800;
+  color: var(--ben-text); margin-bottom: 1rem; letter-spacing: -.5px;
+}
+.feature-description { color: var(--ben-muted); font-size: .95rem; line-height: 1.7; }
+
+/* Características */
+.caracteristicas-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 5rem; padding-top: 4rem;
+  border-top: 1px solid rgba(255,107,53,.2);
+}
+.caracteristica-card {
+  background: linear-gradient(135deg, rgba(255,107,53,.08), rgba(78,205,196,.05));
+  border: 1px solid rgba(255,107,53,.2);
+  border-radius: 16px; overflow: hidden;
+  transition: all .3s ease;
+  animation: caracSlide .9s ease-out forwards;
+  opacity: 0;
+}
+@keyframes caracSlide {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.caracteristica-card:hover {
+  background: linear-gradient(135deg, rgba(255,107,53,.12), rgba(78,205,196,.08));
+  border-color: rgba(255,107,53,.4);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(255,107,53,.15);
+}
+.caracteristica-imagen {
+  width: 100%; height: 200px; overflow: hidden;
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue-medium));
+}
+.caracteristica-imagen img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .3s ease;
+}
+.caracteristica-card:hover .caracteristica-imagen img { transform: scale(1.05); }
+.caracteristica-content { padding: 2rem; }
+.caracteristica-icono { font-size: 2.5rem; margin-bottom: 1rem; }
+.caracteristica-titulo {
+  font-size: 1.3rem; font-weight: 800;
+  color: var(--ben-text); margin-bottom: .8rem; letter-spacing: -.5px;
+}
+.caracteristica-descripcion { color: var(--ben-muted); font-size: .95rem; line-height: 1.7; }
+
+@media (max-width: 768px) {
+  .beneficios { padding: 60px 1.5rem; }
+  .section-title { font-size: 2.2rem; }
+  .section-subtitle { font-size: 1rem; }
+  .features-grid { gap: 2rem; }
+  .feature-box { padding: 1.8rem 1.5rem; }
+  .feature-title { font-size: 1.1rem; }
+  .caracteristicas-section { gap: 2rem; margin-top: 3rem; padding-top: 2rem; }
+  .caracteristica-imagen { height: 180px; }
+  .caracteristica-content { padding: 1.5rem; }
+  .caracteristica-titulo { font-size: 1.1rem; }
+}
+</style>

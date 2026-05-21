@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/home/Hero.astro';
+import FeaturesBar from '../components/home/FeaturesBar.astro';
+import Problemas from '../components/home/Problemas.astro';
+import Beneficios from '../components/home/Beneficios.astro';
+import CasosPreview from '../components/home/CasosPreview.astro';
+import Seguridad from '../components/home/Seguridad.astro';
+import FormDemoHome from '../components/home/FormDemoHome.astro';
+---
+
+<BaseLayout
+  title="Software de Gestión de Activos"
+  description="Éficer te ayuda a controlar, auditar y gestionar todos tus activos fijos desde una sola plataforma. Sin Excel. Sin desorden. Sin observaciones."
+>
+  <Hero />
+  <FeaturesBar />
+  <Problemas />
+  <Beneficios />
+  <CasosPreview />
+  <Seguridad />
+  <FormDemoHome />
+</BaseLayout>

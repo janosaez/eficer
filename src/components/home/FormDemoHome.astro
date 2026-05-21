@@ -1,0 +1,100 @@
+---
+---
+
+<section class="section section-alt" id="demo">
+  <div class="container fdh-wrap">
+
+    <div class="fdh-copy">
+      <div class="section-tag">Demo gratuita</div>
+      <h2 class="section-title">¿Listo para dejar atrás el Excel?</h2>
+      <p class="section-sub">
+        Agenda una demostración personalizada y descubre cómo Éficer
+        transforma el control patrimonial de tu institución.
+      </p>
+      <ul class="fdh-list">
+        <li>✅ Sin compromiso</li>
+        <li>✅ Personalizado para tu institución</li>
+        <li>✅ Te contactamos en menos de 24 horas</li>
+      </ul>
+    </div>
+
+    <form
+      class="fdh-form card"
+      name="demo-home"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="demo-home" />
+      <p style="display:none"><label>No completar: <input name="bot-field" /></label></p>
+
+      <div class="fdh-field">
+        <label for="fdh-nombre">Nombre *</label>
+        <input id="fdh-nombre" name="nombre" type="text" placeholder="Tu nombre completo" required />
+      </div>
+      <div class="fdh-field">
+        <label for="fdh-empresa">Institución / Empresa *</label>
+        <input id="fdh-empresa" name="empresa" type="text" placeholder="Nombre de tu institución" required />
+      </div>
+      <div class="fdh-field">
+        <label for="fdh-telefono">Teléfono *</label>
+        <input id="fdh-telefono" name="telefono" type="tel" placeholder="+51 999 999 999" required />
+      </div>
+      <div class="fdh-field">
+        <label for="fdh-correo">Correo electrónico</label>
+        <input id="fdh-correo" name="correo" type="email" placeholder="correo@empresa.com" />
+      </div>
+      <div class="fdh-field">
+        <label for="fdh-mensaje">Mensaje (opcional)</label>
+        <textarea id="fdh-mensaje" name="mensaje" rows="3" placeholder="Cuéntanos sobre tu caso..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+        Agendar mi demostración personalizada
+      </button>
+      <p class="fdh-note">Te contactamos en menos de 24 horas</p>
+    </form>
+
+  </div>
+</section>
+
+<style>
+.fdh-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.fdh-list {
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.fdh-list li { font-size: .9rem; color: var(--text-2); }
+
+.fdh-form { display: flex; flex-direction: column; gap: 16px; }
+.fdh-field { display: flex; flex-direction: column; gap: 6px; }
+.fdh-field label { font-size: .82rem; font-weight: 600; color: var(--text); }
+.fdh-field input,
+.fdh-field textarea {
+  padding: 11px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: .9rem;
+  color: var(--text);
+  font-family: inherit;
+  transition: border-color .15s;
+  background: #fff;
+}
+.fdh-field input:focus,
+.fdh-field textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+.fdh-field textarea { resize: vertical; }
+.fdh-note { font-size: .78rem; color: var(--text-3); text-align: center; margin-top: -4px; }
+
+@media (max-width: 800px) { .fdh-wrap { grid-template-columns: 1fr; } }
+</style>
