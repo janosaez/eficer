@@ -7,8 +7,8 @@ const features = [
 
 const caracteristicas = [
   {
-    img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop',
-    alt: 'Control de Bienes',
+    img: 'https://eficer.com/wp-content/uploads/2026/05/peru-softwres-control-patrimonial.png',
+    alt: 'Control de Bienes Patrimoniales en Perú',
     icon: '⚖️',
     title: 'Ten control total de cada activo',
     desc: 'Ubica, registra y controla cada bien sin pérdida de información ni errores en auditorías.',
@@ -58,7 +58,7 @@ const caracteristicas = [
       {caracteristicas.map((c, i) => (
         <div class="caracteristica-card" style={`animation-delay:${.1 + i * .1}s`}>
           <div class="caracteristica-imagen">
-            <img src={c.img} alt={c.alt} loading="lazy" />
+            <img src={c.img} alt={c.alt} loading="lazy" width="500" height="400" />
           </div>
           <div class="caracteristica-content">
             <div class="caracteristica-icono">{c.icon}</div>
