@@ -4,6 +4,6 @@ export default defineConfig({
   output: 'static',
   site: 'https://eficer.com',
   build: {
-    inlineStylesheets: 'auto',
+    inlineStylesheets: 'always',
   },
 });
