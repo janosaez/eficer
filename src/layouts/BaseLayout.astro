@@ -22,11 +22,15 @@ const {
   <meta name="description" content={description} />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
-  <!-- Fuentes: preconnect + stylesheet directo (2 KB, font-display:swap garantizado) -->
+  <!-- Fuentes: preconnect + carga no bloqueante (CSS inline = sin FOIT) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Montserrat:wght@700;800&display=swap" />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Montserrat:wght@700;800&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Montserrat:wght@700;800&display=swap" />
+  </noscript>
 
   <!-- Preconnect CDNs de imágenes -->
   <link rel="preconnect" href="https://eficer.com" />
